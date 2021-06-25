@@ -3,21 +3,53 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { Route, Link, BrowserRouter } from 'react-router-dom';
 import A from "./A";
 
+
+import Ref from "./ref";
+import { Switch } from 'react-router';
+  
+
+
+
+const routs = (
+  < BrowserRouter >
+     
+
+             <Switch>
+              <Link to="/">Home</Link>
+           
+        
+              <Link to="/B ">Users</Link>
+          
+           
+              <Link to="/ref ">reference</Link>
+          
+           
+              
+        
+              </Switch>
+
+              <ul role="nav">
+         <li><Link to="/B">B</Link></li>
+         <li> <Link to= "/ref">Reference</Link></li>
+       </ul>
+
+
+      
+        <Route exact path="/" component={A} />
+        <Route path="/B" component={App} />
+        <Route path = "/ref" component= {Ref} />
+        
+     
+  </ BrowserRouter >
+);
 
 
 ReactDOM.render(
 
-  <React.StrictMode>
-    
-    <App name="Raiyan" />
-    <A/>
-    
-    
-    
-    
-  </React.StrictMode>,
+      routs,
 
 document.getElementById('root')
 );

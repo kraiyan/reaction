@@ -22,6 +22,11 @@ class App extends React.Component {
     handlesurname = (event) => {
       this.setState({  name: event.target.value });
     };
+    componentDidMount(){
+        document.title=
+        "Welcome to intro tabs";
+  }
+  
 
   render() {
     return(
