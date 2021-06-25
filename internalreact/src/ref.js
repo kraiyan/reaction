@@ -7,7 +7,7 @@ export default  function Ref() {
     const [name,setname] = useState(" ");
     const renderCount =useRef(0);
 
-    const  inputRef =useRef();
+    const  prevname =useRef(" ");
 
       useEffect(()=>{
 
@@ -15,6 +15,12 @@ export default  function Ref() {
 
       })
 
+         
+         useEffect(()=>{
+
+
+            prevname.current=name;
+         },[name])
 
     return(
    
@@ -22,9 +28,9 @@ export default  function Ref() {
            
               <input value={name} onChange={e=>setname(e.target.value)} />
                
-                <div>my name is {name}</div>
+                <div>my name is {name} and it used to be{prevname.current}</div>
                 <div> I rendered {renderCount.current}</div>
-
+               
                 
 
 
