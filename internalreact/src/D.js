@@ -1,6 +1,6 @@
 
   import { useEffect } from "react";
-  import { useState } from "react";
+  
 const D = (props) => {
    
     
@@ -12,17 +12,6 @@ const D = (props) => {
 
 
   
-    const [name, setName] = useState({
-       
-    
-      key1: "Hi!",
-      key2: "NAmsste",
-      key3: "Poekmone"
-    
-      
-    });
-    
-    
     
       
     return(

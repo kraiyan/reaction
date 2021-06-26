@@ -18,17 +18,18 @@ export default  function Ref() {
          
          useEffect(()=>{
 
-
-            prevname.current=name;
-         },[name])
+             prevname.current.focus();
+        
+         },[])
 
     return(
    
          <>
            
-              <input value={name} onChange={e=>setname(e.target.value)} />
+              <input ref={prevname} value={name} onChange={e=>setname(e.target.value)} />
                
-                <div>my name is {name} and it used to be{prevname.current}</div>
+                 <input  value={name}  ref={prevname}/>
+                <div>my name is {name} </div>
                 <div> I rendered {renderCount.current}</div>
                
                 

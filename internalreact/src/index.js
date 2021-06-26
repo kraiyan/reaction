@@ -6,6 +6,8 @@ import reportWebVitals from './reportWebVitals';
 import { Route, Link, BrowserRouter } from 'react-router-dom';
 import A from "./A";
 
+import Api from "./api"
+
 
 import Ref from "./ref";
 import { Switch } from 'react-router';
@@ -18,6 +20,7 @@ const routs = (
      
 
              <Switch>
+               <>
               <Link to="/">Home</Link>
            
         
@@ -25,15 +28,17 @@ const routs = (
           
            
               <Link to="/ref ">reference</Link>
+              <Link to= "/api">Api</Link>
           
-           
+            </>
               
         
               </Switch>
 
-              <ul role="nav">
+              <ul>
          <li><Link to="/B">B</Link></li>
          <li> <Link to= "/ref">Reference</Link></li>
+         <li><Link to ="/api">Apis</Link></li>
        </ul>
 
 
@@ -41,6 +46,7 @@ const routs = (
         <Route exact path="/" component={A} />
         <Route path="/B" component={App} />
         <Route path = "/ref" component= {Ref} />
+        <Route path ="/api" component={Api}/>
         
      
   </ BrowserRouter >
